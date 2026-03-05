@@ -13,27 +13,32 @@ const loadTickets = async () => {
 
 function App() {
   const [taskList, setTaskList] = useState([]);
+  const [resolveList,setResolveList]=useState([])
 
   const addToTaskHandle = (task) => {
-    console.log("add task", task);
+    
     const newTask = [...taskList, task];
     setTaskList(newTask);
   };
+   
+  const resolveHandle=(resolve)=>{
+   const newResolveList=[...resolveList,resolve]
+   setResolveList(newResolveList)
+  }
 
   const ticketsPromise = loadTickets();
-
   return (
     <>
       <div className=" bg-gray-100">
-        <Navbar ></Navbar>
+        <Navbar></Navbar>
 
         <div className=" mx-auto max-w-[1200px]">
-          <Banner taskList={taskList}></Banner>
+          <Banner resolveList={resolveList} taskList={taskList}></Banner>
           <div className="flex justify-between my-5 text-2xl font-semibold">
             <h1>Customer Tickets</h1>
             <h1>Task Status</h1>
           </div>
-          <div className="flex gap-4">
+          <div className="flex gap-4  justify-between">
             <Suspense
               fallback={
                 <span className="loading loading-spinner text-error"></span>
@@ -44,7 +49,7 @@ function App() {
                 ticketsPromise={ticketsPromise}
               ></Tickets>
             </Suspense>
-            <TaskStatus></TaskStatus>
+            <TaskStatus  resolveList={resolveList} resolveHandle={resolveHandle} taskList={taskList}></TaskStatus>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import vectorImg from "../../assets/vector1.png";
-const Banner = ( {taskList}) => {
+const Banner = ( {taskList,resolveList}) => {
   return (
     <div className="flex flex-col  md:flex-row justify-between text-center gap-10 items-center text-2xl text-white my-10">
       <div className="flex justify-center  text-center  items-center rounded-2xl  bg-linear-to-br from-[#422AD5] [#8249EB] to-[#9F62F2]">
@@ -17,7 +17,7 @@ const Banner = ( {taskList}) => {
 
         <div>
           <h1>Resolve</h1>
-          <span className="text-5xl  font-bold">0</span>
+          <span className="text-5xl  font-bold">{resolveList.length}</span>
         </div>
 
         <img className=" rotate-180" src={vectorImg} alt="" />
