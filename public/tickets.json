@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "title": "Login issue",
+    "description": "Customer unable to login to the account.",
+    "customer": "John Doe",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-01"
+  },
+  {
+    "id": 2,
+    "title": "Password reset problem",
+    "description": "Reset password link not working.",
+    "customer": "Sara Khan",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2026-03-01"
+  },
+  {
+    "id": 3,
+    "title": "Payment failed",
+    "description": "Customer payment declined during checkout.",
+    "customer": "Mike Johnson",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2026-03-02"
+  },
+  {
+    "id": 4,
+    "title": "Order not received",
+    "description": "Customer has not received the ordered product.",
+    "customer": "Emma Brown",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-02"
+  },
+  {
+    "id": 5,
+    "title": "Website loading slow",
+    "description": "Customer reports slow loading on homepage.",
+    "customer": "David Lee",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2026-03-02"
+  },
+  {
+    "id": 6,
+    "title": "Email notification not received",
+    "description": "Customer did not receive order confirmation email.",
+    "customer": "Sophia Ahmed",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2026-03-03"
+  },
+  {
+    "id": 7,
+    "title": "Account suspended",
+    "description": "Customer account suspended without reason.",
+    "customer": "Daniel Smith",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-03"
+  },
+  {
+    "id": 8,
+    "title": "Refund request",
+    "description": "Customer requested refund for wrong product.",
+    "customer": "Olivia Wilson",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2026-03-03"
+  },
+  {
+    "id": 9,
+    "title": "App crash",
+    "description": "Mobile app crashes when opening profile page.",
+    "customer": "James Taylor",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2026-03-04"
+  },
+  {
+    "id": 10,
+    "title": "Coupon code invalid",
+    "description": "Customer unable to apply discount coupon.",
+    "customer": "Isabella Martinez",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2026-03-04"
+  },
+  {
+    "id": 11,
+    "title": "Profile update error",
+    "description": "Customer cannot update profile information.",
+    "customer": "Liam Anderson",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2026-03-04"
+  },
+  {
+    "id": 12,
+    "title": "Shipping delay",
+    "description": "Order shipment delayed more than expected.",
+    "customer": "Mia Thomas",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2026-03-04"
+  },
+  {
+    "id": 13,
+    "title": "Search not working",
+    "description": "Product search returns no results.",
+    "customer": "Noah White",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2026-03-05"
+  },
+  {
+    "id": 14,
+    "title": "Two-factor authentication issue",
+    "description": "Customer not receiving OTP for login.",
+    "customer": "Ava Harris",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-05"
+  },
+  {
+    "id": 15,
+    "title": "Language setting problem",
+    "description": "Website language resets automatically.",
+    "customer": "William Clark",
+    "priority": "Low",
+    "status": "Resolved",
+    "createdAt": "2026-03-05"
+  }
+]

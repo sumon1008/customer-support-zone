@@ -49,7 +49,7 @@ const Navbar = () => {
           <li><a>Contact</a></li>
         </ul>
       </div>
-        <a className="btn bg-[#422AD5] text-white">+ Button</a>
+        <a className="btn bg-linear-to-br from-[#422AD5] [#8249EB] to-[#9F62F2] text-white">+ Button</a>
       </div>
     </div>
   );
