@@ -13,18 +13,17 @@ const loadTickets = async () => {
 
 function App() {
   const [taskList, setTaskList] = useState([]);
-  const [resolveList,setResolveList]=useState([])
+  const [resolveList, setResolveList] = useState([]);
 
   const addToTaskHandle = (task) => {
-    
     const newTask = [...taskList, task];
     setTaskList(newTask);
   };
-   
-  const resolveHandle=(resolve)=>{
-   const newResolveList=[...resolveList,resolve]
-   setResolveList(newResolveList)
-  }
+
+  const resolveHandle = (resolve) => {
+    const newResolveList = [...resolveList, resolve];
+    setResolveList(newResolveList);
+  };
 
   const ticketsPromise = loadTickets();
   return (
@@ -34,12 +33,9 @@ function App() {
 
         <div className=" mx-auto max-w-[1200px]">
           <Banner resolveList={resolveList} taskList={taskList}></Banner>
-          <div className="flex justify-between my-5 text-2xl font-semibold">
-            <h1>Customer Tickets</h1>
-            <h1>Task Status</h1>
-          </div>
-          <div className="flex gap-4  justify-between">
-            <Suspense
+          <div className="flex justify-between ">
+<div className="md:flex-2">
+ <Suspense
               fallback={
                 <span className="loading loading-spinner text-error"></span>
               }
@@ -49,7 +45,18 @@ function App() {
                 ticketsPromise={ticketsPromise}
               ></Tickets>
             </Suspense>
-            <TaskStatus  resolveList={resolveList} resolveHandle={resolveHandle} taskList={taskList}></TaskStatus>
+</div>
+
+<div className="md:flex-1 ms-5">
+       
+            <TaskStatus
+              resolveList={resolveList}
+              resolveHandle={resolveHandle}
+              taskList={taskList}
+            ></TaskStatus>
+</div>
+         
+    
           </div>
         </div>
       </div>

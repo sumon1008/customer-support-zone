@@ -7,9 +7,10 @@ const Ticket = ({ ticket,addToTaskHandle}) => {
   console.log(ticket);
   return (
     <div className=" ">
+      
       <div
         onClick={() => addToTaskHandle(ticket)}
-        className="hover:shadow-xl cursor-pointer transition card w-96 bg-base-100 card-xs shadow-sm"
+        className="hover:shadow-xl cursor-pointer transition card  bg-base-100 card-xs shadow-sm"
       >
         <div className="card-body">
           <div className="flex justify-between">
