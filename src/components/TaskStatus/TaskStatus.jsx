@@ -6,6 +6,7 @@ const TaskStatus = ({
   resolveList,
   handleRemoveTicket,
 }) => {
+  
   return (
     <div>
       <h1 className="font-semibold text-2xl mb-3">Task Status</h1>
@@ -19,6 +20,7 @@ const TaskStatus = ({
                   onClick={() => {
                     resolveHandle(status);
                     handleRemoveTicket(status);
+                    
                   }}
                   className="btn text-white bg-green-500 w-full"
                 >

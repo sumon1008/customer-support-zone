@@ -4,7 +4,6 @@ import Banner from "./components/Banner/Banner";
 import Navbar from "./components/Navbar/Navbar";
 import Tickets from "./components/Tickects/Tickets";
 import TaskStatus from "./components/TaskStatus/TaskStatus";
-import { RiIncreaseDecreaseFill } from "react-icons/ri";
 import Footer from "./components/Footer/Footer";
 
 const loadTickets = async () => {
