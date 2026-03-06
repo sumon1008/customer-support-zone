@@ -4,13 +4,15 @@ import Banner from "./components/Banner/Banner";
 import Navbar from "./components/Navbar/Navbar";
 import Tickets from "./components/Tickects/Tickets";
 import TaskStatus from "./components/TaskStatus/TaskStatus";
+import { RiIncreaseDecreaseFill } from "react-icons/ri";
+import Footer from "./components/Footer/Footer";
 
 const loadTickets = async () => {
   const res = await fetch("/tickets.json");
   const data = res.json();
   return data;
 };
-
+const ticketsPromise = loadTickets();
 function App() {
   const [taskList, setTaskList] = useState([]);
   const [resolveList, setResolveList] = useState([]);
@@ -25,7 +27,12 @@ function App() {
     setResolveList(newResolveList);
   };
 
-  const ticketsPromise = loadTickets();
+  const handleRemoveTicket = (t) => {
+    const filterTask = taskList.filter((task) => task !== t);
+    console.log(filterTask);
+    setTaskList(filterTask);
+  };
+
   return (
     <>
       <div className=" bg-gray-100">
@@ -34,31 +41,30 @@ function App() {
         <div className=" mx-auto max-w-[1200px]">
           <Banner resolveList={resolveList} taskList={taskList}></Banner>
           <div className="flex justify-between ">
-<div className="md:flex-2">
- <Suspense
-              fallback={
-                <span className="loading loading-spinner text-error"></span>
-              }
-            >
-              <Tickets
-                addToTaskHandle={addToTaskHandle}
-                ticketsPromise={ticketsPromise}
-              ></Tickets>
-            </Suspense>
-</div>
+            <div className="md:flex-2">
+              <Suspense
+                fallback={
+                  <span className="loading loading-spinner text-error"></span>
+                }
+              >
+                <Tickets
+                  addToTaskHandle={addToTaskHandle}
+                  ticketsPromise={ticketsPromise}
+                ></Tickets>
+              </Suspense>
+            </div>
 
-<div className="md:flex-1 ms-5">
-       
-            <TaskStatus
-              resolveList={resolveList}
-              resolveHandle={resolveHandle}
-              taskList={taskList}
-            ></TaskStatus>
-</div>
-         
-    
+            <div className="md:flex-1 ms-5">
+              <TaskStatus
+                handleRemoveTicket={handleRemoveTicket}
+                resolveList={resolveList}
+                resolveHandle={resolveHandle}
+                taskList={taskList}
+              ></TaskStatus>
+            </div>
           </div>
         </div>
+        <Footer></Footer>
       </div>
     </>
   );

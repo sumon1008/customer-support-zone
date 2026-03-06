@@ -1,13 +1,8 @@
 import React from "react";
 
-
-
-
-const Ticket = ({ ticket,addToTaskHandle}) => {
-  console.log(ticket);
+const Ticket = ({ ticket, addToTaskHandle }) => {
   return (
-    <div className=" ">
-      
+    <div>
       <div
         onClick={() => addToTaskHandle(ticket)}
         className="hover:shadow-xl cursor-pointer transition card  bg-base-100 card-xs shadow-sm"
@@ -22,12 +17,7 @@ const Ticket = ({ ticket,addToTaskHandle}) => {
                   : "bg-yellow-300 rounded-2xl px-2"
               }
             >
-              <div>
-                <span>
-                  <i class="fa-solid fa-circle"></i>
-                </span>
-                <span> {ticket.status}</span>
-              </div>
+              <span> {ticket.status}</span>
             </button>
           </div>
           <p className="text-gray-500">{ticket.description}</p>
@@ -36,13 +26,13 @@ const Ticket = ({ ticket,addToTaskHandle}) => {
             <div className="flex gap-x-2 justify-around">
               <span>#{ticket.id}</span>
               <span
-                className={ 
+                className={
                   ticket.priority === "HIGH"
                     ? "text-red-500 font-semibold"
                     : ticket.priority === "MEDIUM"
                       ? "text-yellow-400 font-semibold"
                       : "text-green-500 font-semibold"
-                } 
+                }
               >
                 {ticket.priority}
               </span>
