@@ -20,6 +20,9 @@ function App() {
   const addToTaskHandle = (task) => {
     const newTask = [...taskList, task];
     setTaskList(newTask);
+       if(taskList!==newTask){
+      toast('Added to the task list')
+    }
   };
 
   const resolveHandle = (resolve) => {
