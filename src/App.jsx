@@ -1,5 +1,6 @@
 import { Suspense, useState } from "react";
 import "./App.css";
+import { toast, ToastContainer} from 'react-toastify';
 import Banner from "./components/Banner/Banner";
 import Navbar from "./components/Navbar/Navbar";
 import Tickets from "./components/Tickects/Tickets";
@@ -30,6 +31,9 @@ function App() {
     const filterTask = taskList.filter((task) => task !== t);
     console.log(filterTask);
     setTaskList(filterTask);
+    if(taskList!==filterTask){
+      toast('resolve task')
+    }
   };
 
   return (
@@ -65,6 +69,7 @@ function App() {
         </div>
         <Footer></Footer>
       </div>
+      <ToastContainer></ToastContainer>
     </>
   );
 }
